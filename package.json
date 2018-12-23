@@ -4,7 +4,10 @@
   "description": "Um projeto para pessoas buscarem conhecimento dentro das suas empresas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "dev": "next"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/jeanbauer/busquemconhecimento/issues"
   },
-  "homepage": "https://github.com/jeanbauer/busquemconhecimento#readme"
+  "homepage": "https://github.com/jeanbauer/busquemconhecimento#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "react-testing-library": "^5.4.2"
+  }
 }
