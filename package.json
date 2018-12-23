@@ -1,0 +1,22 @@
+{
+  "name": "busquemconhecimento",
+  "version": "1.0.0",
+  "description": "Um projeto para pessoas buscarem conhecimento dentro das suas empresas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanbauer/busquemconhecimento.git"
+  },
+  "keywords": [
+    "nextjs"
+  ],
+  "author": "Jean Bauer",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jeanbauer/busquemconhecimento/issues"
+  },
+  "homepage": "https://github.com/jeanbauer/busquemconhecimento#readme"
+}
