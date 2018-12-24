@@ -4,9 +4,9 @@ import { render } from 'react-testing-library'
 import IndexComponent from '../index'
 
 describe('IndexComponent', () => {
-  it('renders a string paragraph showing "Fácil Assim?"', () => {
+  it('renders page title "Bilu"', () => {
     const { getByText } = render(<IndexComponent />)
 
-    expect(getByText('Fácil assim?')).not.toBeNull()
+    expect(getByText('Bilu')).not.toBeNull()
   })
 })

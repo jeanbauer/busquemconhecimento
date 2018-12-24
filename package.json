@@ -25,11 +25,13 @@
   "dependencies": {
     "next": "^7.0.2",
     "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2"
+    "react-dom": "16.7.0-alpha.2",
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge",
     "babel-jest": "^23.6.0",
+    "babel-plugin-styled-components": "^1.9.4",
     "husky": "^1.2.1",
     "jest": "^23.6.0",
     "prettier": "1.15.3",
