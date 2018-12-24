@@ -18,6 +18,11 @@ export default class StyledDocument extends Document {
     return (
       <html>
         <Head>{this.props.styleTags}</Head>
+        <link
+          href='https://fonts.googleapis.com/css?family=Open+Sans:300,900|Staatliches'
+          rel='stylesheet'
+        />
+        <link rel='shortcut icon' href='../static/favicon.ico' />
         <body style={{ margin: 0 }}>
           <Main />
           <NextScript />

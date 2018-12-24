@@ -2,7 +2,10 @@ import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
 
 const theme = {
-  primaryColor: '#ff4143'
+  primaryColor: '#ff4143',
+  secondaryColor: '#ffefede6',
+  headingFont: 'Staatliches, cursive',
+  textFont: 'Open Sans, sans-serif'
 }
 
 const Index = () => (
@@ -22,5 +25,6 @@ export default Index
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.primaryColor};
+  font-family: ${({ theme }) => theme.headingFont};
   text-align: center;
 `
