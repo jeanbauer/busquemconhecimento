@@ -1,16 +1,7 @@
 import React from 'react'
 import { cleanup, render, fireEvent } from 'react-testing-library'
 
-import { Home } from '../home'
-
-jest.mock('../../components/session/with-authentication', () => ({
-  withAuthentication: Component => Component,
-  AuthUserContext: jest.fn()
-}))
-
-jest.mock('../../components/firebase/firestore', () => ({
-  doGoogleSignIn: jest.fn()
-}))
+import Home from '../home'
 
 describe('Home', () => {
   const googleButtonText = /login with google/i
