@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
+import Home from '../containers/home'
 
 const theme = {
   primaryColor: '#ff4143',
@@ -16,7 +17,10 @@ const Index = () => (
     </Head>
 
     <ThemeProvider theme={theme}>
-      <Title>Bilu</Title>
+      <>
+        <Title>Bilu</Title>
+        <Home />
+      </>
     </ThemeProvider>
   </>
 )
