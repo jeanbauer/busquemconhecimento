@@ -2,13 +2,18 @@ import { auth } from '../firebase/firestore'
 
 export const AuthUserContext = React.createContext(null)
 
+export const userEmailIsFromOurCompany = (
+  email,
+  companyEmailDomain = process.env.COMPANY_EMAIL_ADDRESS
+) => email.indexOf(companyEmailDomain) > 0
+
 export const withAuthentication = Component =>
   class WithAuthentication extends React.Component {
     state = { authUser: null }
 
     componentDidMount() {
       auth.onAuthStateChanged(authUser => {
-        if (authUser) {
+        if (authUser && userEmailIsFromOurCompany(authUser.email)) {
           this.setState({
             authUser: {
               name: authUser.displayName,
