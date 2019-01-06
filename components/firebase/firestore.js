@@ -19,6 +19,8 @@ const googleProvider = new firebase.auth.GoogleAuthProvider()
 const auth = firebase.auth()
 const firestore = firebase.firestore()
 
-const doGoogleSignIn = () => auth.signInWithRedirect(googleProvider)
+const doGoogleSignIn = function() {
+  auth.signInWithRedirect(googleProvider)
+}
 
 export { auth, firebase, firestore, doGoogleSignIn }
