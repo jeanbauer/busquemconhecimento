@@ -5,7 +5,7 @@ const Home = ({ user, signIn }) => (
   <Content>
     {!user && <button onClick={signIn}>Login with google</button>}
 
-    <OfferSelector />
+    <OfferSelector user={user} />
   </Content>
 )
 
