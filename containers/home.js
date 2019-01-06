@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-import OfferSelector from '../components/offer-selector/offer-selector'
+import OfferSelector from '../components/offers/offer-selector'
+import Offers from '../components/offers/offers'
 
 const Home = ({ user, signIn }) => (
   <Content>
     {!user && <button onClick={signIn}>Login with google</button>}
 
     <OfferSelector user={user} />
+
+    <Offers user={user} />
   </Content>
 )
 
