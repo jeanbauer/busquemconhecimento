@@ -3,6 +3,11 @@ import { cleanup, render, fireEvent } from 'react-testing-library'
 
 import Home from '../home'
 
+jest.mock(
+  '../../components/offer-selector/offer-selector',
+  () => 'offer-selector'
+)
+
 describe('Home', () => {
   const googleButtonText = /login with google/i
 
