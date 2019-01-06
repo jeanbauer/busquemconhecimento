@@ -25,6 +25,7 @@
   "dependencies": {
     "dotenv": "^6.2.0",
     "firebase": "^5.7.0",
+    "moment": "^2.23.0",
     "next": "latest",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2",
