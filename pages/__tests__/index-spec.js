@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 
-jest.mock('../../containers/home', () => () => <div>Home</div>)
+jest.mock('../../containers/home-data', () => () => <div>Home</div>)
 
 import IndexComponent from '../index'
 

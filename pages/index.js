@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
-import Home from '../containers/home'
+import Home from '../containers/home-data'
 
 const theme = {
   primaryColor: '#ff4143',
