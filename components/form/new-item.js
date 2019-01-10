@@ -8,7 +8,7 @@ const NewItem = ({ item, onCreate, user }) => {
   if (!item) return null
 
   const field = useFormField('')
-  const knowledge = useFormField('Básico')
+  const knowledge = useFormField('1')
   const observations = useFormField('')
 
   const content = {
@@ -38,9 +38,11 @@ const NewItem = ({ item, onCreate, user }) => {
       <ItemGroup>
         <label>Qual é o grau de conhecimento que você possui nisto?</label>
         <ItemSelect {...knowledge}>
-          <option value='básico'>Básico</option>
-          <option value='intermediário'>Intermediário</option>
-          <option value='avançado'>Avançado</option>
+          <option value='1'>Quero aprender</option>
+          <option value='2'>Já pratiquei</option>
+          <option value='3'>Posso fazer</option>
+          <option value='4'>Buscando liderança</option>
+          <option value='5'>Líder</option>
         </ItemSelect>
       </ItemGroup>
 

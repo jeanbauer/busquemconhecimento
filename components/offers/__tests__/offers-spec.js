@@ -25,7 +25,7 @@ describe('Offers', () => {
     it('shows offers', () => {
       const { getByText } = render(<Offers user={authUser} />)
 
-      expect(getByText(/Oportunidades para aprender/i)).not.toBeNull()
+      expect(getByText(/Pessoas querendo aprender/i)).not.toBeNull()
     })
   })
 })

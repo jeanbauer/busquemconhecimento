@@ -12,6 +12,7 @@ describe('OfferCard', () => {
       text: 'I wanna learn how to improve my testing skills',
       name: 'Jean',
       observation: 'I took Kent C Dodds course on javascriptesting',
+      knowledge: '1',
       email: 'jean@jean',
       date: new Date()
     }
@@ -26,6 +27,7 @@ describe('OfferCard', () => {
       expect(
         getByText(/I took Kent C Dodds course on javascriptesting/i)
       ).not.toBeNull()
+      expect(getByText(/Quero aprender/i))
     })
   })
 })

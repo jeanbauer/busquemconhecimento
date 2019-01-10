@@ -29,13 +29,13 @@ const Offers = ({ user }) => {
           active={activeTab === 'learn'}
           onClick={() => setActiveTab('learn')}
         >
-          <p>Oportunidades para aprender</p>
+          <p>Pessoas querendo aprender</p>
         </Tab>
         <Tab
           active={activeTab === 'teach'}
           onClick={() => setActiveTab('teach')}
         >
-          <p>Oportunidades para ensinar</p>
+          <p>Pessoas querendo ensinar</p>
         </Tab>
       </Panel>
 

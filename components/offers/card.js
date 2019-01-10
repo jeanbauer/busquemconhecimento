@@ -4,10 +4,28 @@ import 'moment/locale/pt-br'
 
 moment.locale('pt-br')
 
-const OfferCard = ({ text, name, observation, email, date }) => (
+const knowledgeBadge = knowledge => {
+  switch (knowledge) {
+    case '1':
+      return 'Quero aprender'
+    case '2':
+      return 'Já pratiquei'
+    case '3':
+      return 'Posso fazer'
+    case '4':
+      return 'Buscando liderança'
+    case '5':
+      return 'Líder'
+    default:
+      return ''
+  }
+}
+
+const OfferCard = ({ text, name, knowledge, observation, email, date }) => (
   <Card id={email}>
-    <Title>{text}</Title>
-    <p>{observation}</p>
+    <Badge>{knowledgeBadge(knowledge)}</Badge>
+    <Title>{text} </Title>
+    <Obs>{observation}</Obs>
     <Time>
       Por: {name} {moment(date).fromNow()}
     </Time>
@@ -16,22 +34,38 @@ const OfferCard = ({ text, name, observation, email, date }) => (
 
 export default OfferCard
 
+const Obs = styled.p`
+  max-width: 300px;
+`
+
+const Badge = styled.span`
+  background: #ff78cb;
+  color: #fff;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 10px;
+`
+
 const Title = styled.p`
   font-family: 'Staatliches', cursive;
-  border-bottom: 1px solid;
   padding-bottom: 7px;
 `
 
 const Time = styled.p`
   font-weight: 300;
-  font-size: 12px;
+  font-size: 10px;
 `
 
 const Card = styled.div`
   background: #ffffff;
-  padding: 20px;
+  padding: 10px;
   margin: 20px 20px 0 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 
   @media (max-width: 768px) {
     margin: 10px 0;
