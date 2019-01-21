@@ -4,6 +4,17 @@ import 'moment/locale/pt-br'
 
 moment.locale('pt-br')
 
+const categoryBadge = category => {
+  switch (category) {
+    case '1':
+      return 'Técnico'
+    case '2':
+      return 'Justiça Social'
+    default:
+      return ''
+  }
+}
+
 const knowledgeBadge = knowledge => {
   switch (knowledge) {
     case '1':
@@ -21,9 +32,18 @@ const knowledgeBadge = knowledge => {
   }
 }
 
-const OfferCard = ({ text, name, knowledge, observation, email, date }) => (
+const OfferCard = ({
+  text,
+  name,
+  knowledge,
+  category,
+  observation,
+  email,
+  date
+}) => (
   <Card id={email}>
     <Badge>{knowledgeBadge(knowledge)}</Badge>
+    <CategoryBadge>{categoryBadge(category)}</CategoryBadge>
     <Title>{text} </Title>
     <Obs>{observation}</Obs>
     <Time>
@@ -43,12 +63,17 @@ const Badge = styled.span`
   color: #fff;
   padding: 0 8px;
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 11px;
+`
+
+const CategoryBadge = styled(Badge)`
+  background: #2196f3;
 `
 
 const Title = styled.p`
   font-family: 'Staatliches', cursive;
   padding-bottom: 7px;
+  letter-spacing: 2px;
 `
 
 const Time = styled.p`

@@ -20,7 +20,7 @@ export function subscribe(collection, onDataReceive) {
 
 export function saveOnFirestore(
   collection,
-  { text, user, observation, knowledge }
+  { text, user, observation, knowledge, category }
 ) {
   return new Promise((res, rej) => {
     db.collection(collection)
@@ -31,6 +31,7 @@ export function saveOnFirestore(
         email: user.email,
         date: new Date(),
         observation,
+        category,
         knowledge
       })
       .then(e => res(e))

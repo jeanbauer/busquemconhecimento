@@ -9,6 +9,7 @@ const NewItem = ({ item, onCreate, user }) => {
 
   const field = useFormField('')
   const knowledge = useFormField('1')
+  const category = useFormField('1')
   const observations = useFormField('')
 
   const content = {
@@ -47,6 +48,14 @@ const NewItem = ({ item, onCreate, user }) => {
       </ItemGroup>
 
       <ItemGroup>
+        <label>Isto é algo técnico ou de justiça social?</label>
+        <ItemSelect {...category}>
+          <option value='1'>Técnico</option>
+          <option value='2'>Justiça Social</option>
+        </ItemSelect>
+      </ItemGroup>
+
+      <ItemGroup>
         <label>Observações</label>
         <ItemInput {...observations} />
       </ItemGroup>
@@ -57,6 +66,7 @@ const NewItem = ({ item, onCreate, user }) => {
           saveOnFirestore(item, {
             text: field.value,
             knowledge: knowledge.value,
+            category: category.value,
             observation: observations.value,
             user
           })
