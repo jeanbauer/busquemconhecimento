@@ -10,6 +10,8 @@ const categoryBadge = category => {
       return 'Técnico'
     case '2':
       return 'Justiça Social'
+    case '3':
+      return 'Consultoria'
     default:
       return ''
   }
@@ -42,8 +44,10 @@ const OfferCard = ({
   date
 }) => (
   <Card id={email}>
-    <Badge>{knowledgeBadge(knowledge)}</Badge>
-    <CategoryBadge>{categoryBadge(category)}</CategoryBadge>
+    <div>
+      <Badge>{knowledgeBadge(knowledge)}</Badge>
+      <CategoryBadge>{categoryBadge(category)}</CategoryBadge>
+    </div>
     <Title>{text} </Title>
     <Obs>{observation}</Obs>
     <Time>
@@ -91,6 +95,12 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  div:first-child {
+    span:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
 
   @media (max-width: 768px) {
     margin: 10px 0;

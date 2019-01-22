@@ -48,10 +48,11 @@ const NewItem = ({ item, onCreate, user }) => {
       </ItemGroup>
 
       <ItemGroup>
-        <label>Isto é algo técnico ou de justiça social?</label>
+        <label>Qual é a categoria disto?</label>
         <ItemSelect {...category}>
           <option value='1'>Técnico</option>
           <option value='2'>Justiça Social</option>
+          <option value='3'>Consultoria</option>
         </ItemSelect>
       </ItemGroup>
 
