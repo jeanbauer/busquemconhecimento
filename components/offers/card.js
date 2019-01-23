@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-
 moment.locale('pt-br')
+
+import { deleteOffer } from '../firebase/events'
 
 const categoryBadge = category => {
   switch (category) {
@@ -41,12 +42,24 @@ const OfferCard = ({
   category,
   observation,
   email,
-  date
+  date,
+  canDelete,
+  id,
+  type
 }) => (
   <Card id={email}>
     <div>
       <Badge>{knowledgeBadge(knowledge)}</Badge>
       <CategoryBadge>{categoryBadge(category)}</CategoryBadge>
+      {canDelete && (
+        <DeleteIcon
+          onClick={() => deleteOffer(id, type)}
+          title='Excluir'
+          aria-label='Excluir'
+        >
+          ❌
+        </DeleteIcon>
+      )}
     </div>
     <Title>{text} </Title>
     <Obs>{observation}</Obs>
@@ -57,6 +70,12 @@ const OfferCard = ({
 )
 
 export default OfferCard
+
+const DeleteIcon = styled.span`
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+`
 
 const Obs = styled.p`
   max-width: 300px;
@@ -90,6 +109,7 @@ const Card = styled.div`
   padding: 10px;
   margin: 20px 20px 0 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  min-width: 200px;
 
   display: flex;
   flex-direction: column;
@@ -97,6 +117,9 @@ const Card = styled.div`
   align-items: flex-start;
 
   div:first-child {
+    position: relative;
+    width: 100%;
+
     span:not(:first-child) {
       margin-left: 5px;
     }

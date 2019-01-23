@@ -42,7 +42,12 @@ const Offers = ({ user }) => {
       {activeTab === 'learn' && (
         <CardsList>
           {learn.map(e => (
-            <Card key={e.date} {...e} />
+            <Card
+              type='learn'
+              canDelete={e.email === user.email}
+              key={e.date}
+              {...e}
+            />
           ))}
         </CardsList>
       )}
@@ -50,7 +55,12 @@ const Offers = ({ user }) => {
       {activeTab === 'teach' && (
         <CardsList>
           {teach.map(e => (
-            <Card key={e.date} {...e} />
+            <Card
+              type='teach'
+              canDelete={e.email === user.email}
+              key={e.date}
+              {...e}
+            />
           ))}
         </CardsList>
       )}

@@ -18,6 +18,14 @@ export function subscribe(collection, onDataReceive) {
   })
 }
 
+export function deleteOffer(id, collection) {
+  db.collection(collection)
+    .doc(id)
+    .delete()
+    .then(() => console.log('Document successfully deleted!'))
+    .catch(error => console.error(`Error removing document: ${error}`))
+}
+
 export function saveOnFirestore(
   collection,
   { text, user, observation, knowledge, category }
