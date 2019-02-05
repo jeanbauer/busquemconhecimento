@@ -19,8 +19,9 @@ const googleProvider = new firebase.auth.GoogleAuthProvider()
 const auth = firebase.auth()
 const firestore = firebase.firestore()
 
-const doGoogleSignIn = function() {
-  auth.signInWithRedirect(googleProvider)
-}
+const login = () =>
+  auth
+    .signInWithPopup(googleProvider)
+    .catch(error => console.log('Auth error: ', error))
 
-export { auth, firebase, firestore, doGoogleSignIn }
+export { auth, firebase, firestore, login }
