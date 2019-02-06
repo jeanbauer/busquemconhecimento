@@ -17,7 +17,7 @@ const Button = styled.span`
   padding: 10px;
   text-align: center;
   margin: 20px;
-  border-bottom: 2px solid #cb4040;
+  border-bottom: 2px solid ${props => (props.disabled ? '#434343' : '#cb4040')};
 
   &:hover {
     background: #cb4040;

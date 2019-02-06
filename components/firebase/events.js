@@ -37,7 +37,7 @@ export function saveOnFirestore(
         text,
         name: user.name,
         email: user.email,
-        date: new Date(),
+        date: `${new Date()}`,
         observation,
         category,
         knowledge
