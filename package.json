@@ -27,20 +27,20 @@
     "dotenv": "^6.2.0",
     "firebase": "^5.7.0",
     "moment": "^2.23.0",
-    "next": "latest",
+    "next": "^9.0.0",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2",
     "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge",
-    "babel-jest": "latest",
-    "babel-plugin-styled-components": "latest",
-    "husky": "latest",
-    "jest": "latest",
-    "prettier": "latest",
-    "pretty-quick": "latest",
-    "react-testing-library": "latest"
+    "babel-jest": "^24.8.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "react-testing-library": "^8.0.1"
   },
   "husky": {
     "hooks": {
